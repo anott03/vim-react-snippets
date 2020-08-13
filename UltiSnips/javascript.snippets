@@ -61,28 +61,29 @@ endsnippet
 
 snippet rfc "React Functional Component" b
 import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './${2:$1}.css';
+import './${2:$1}.css';
 
-function ${1:`!v expand('%:t:r')`}({ $3 }) {
+export default function ${1:`!v expand('%:t:r')`}({ $3 }) {
 	return (
-		<${5:div} className={styles.base}>
+		<${5:div} className="$1">
 			$0
 		</$5>
 	);
 }
 
-$1.defaultProps = {$4};
+endsnippet
 
-$1.propTypes = {`!p
-props = t[3]
+snippet rfce "React Functional Component" b
+import React from 'react';
+import './${2:$1}.css';
 
-if props:
-  snip >> 1
-  for prop in props.split(', '):
-    snip += prop + ': PropTypes.any,'
-`
-};
+function ${1:`!v expand('%:t:r')`}({ $3 }) {
+	return (
+		<${5:div} className="$1">
+			$0
+		</$5>
+	);
+}
 
 export default $1;
 endsnippet
