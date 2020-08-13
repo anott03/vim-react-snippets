@@ -1,6 +1,6 @@
 # Vim React Snippets
 
-A Vim snippet library for React in ES6. You may also want to check out [vim-es2015-snippets](https://github.com/epilande/vim-es2015-snippets).
+A Vim snippet library for React in ES6.
 
 Requires [UltiSnips](https://github.com/SirVer/ultisnips).
 
